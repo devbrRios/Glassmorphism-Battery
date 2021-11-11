@@ -15,6 +15,10 @@ section {
     min-height: 100vh;
 }
 
+section.dark {
+    background-color: #161623;
+}
+
 section::before {
     content: '';
     position: absolute;
@@ -126,4 +130,32 @@ section::after {
     font-weight: 700;
 }
 
+.toggle {
+    position: absolute;
+    top:30px;
+    right: 50px;
+    background-color: black;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dark .toggle {
+    background-color: #fff;
+}
 
+.toggle::before {
+    content: '\f186';
+    color: #fff;
+    font-family: fontAwesome;
+    font-size: 1.5em;
+
+}
+
+.dark .toggle::before {
+    content: '\f185';
+    color: #161623;
+}
